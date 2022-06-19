@@ -22,4 +22,9 @@ jobs:
     - name: Lint with flake8
       run: |
         pipenv run flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-        pipenv run pytest
+    - name: Test
+      run: |
+        pipenv run pytest --cov=pypro
+    - name: Coverage report
+      run: |
+        pipenv run codecov
