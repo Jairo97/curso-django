@@ -5,4 +5,7 @@ from django.shortcuts import render # noqa
 
 
 def home(request):
-    return HttpResponse('<html><body>Ola Mundo</body><html>')
+    return render(request, 'base/home.html')
+
+def testez(request):
+    return HttpResponse('testtdh')
